@@ -250,64 +250,7 @@ section h2 {
     font-weight: bold;
 }
 
-/* Quick Start Section */
-.quick-start {
-    background: #f8f9fa;
-}
 
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-}
-
-.step {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.step-number {
-    position: absolute;
-    top: -15px;
-    left: 40px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.step h3 {
-    margin-bottom: 15px;
-    color: #333;
-    font-weight: 600;
-}
-
-.code-block {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 4px solid #667eea;
-    margin: 15px 0;
-    font-family: 'Courier New', monospace;
-}
-
-.notification-example {
-    background: #e8f4ff;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 4px solid #667eea;
-    margin: 15px 0;
-    font-family: 'Courier New', monospace;
-}
 
 /* Commands Section */
 .commands {
@@ -434,55 +377,7 @@ section h2 {
     font-size: 0.9em;
 }
 
-/* Help Section */
-.help {
-    background: white;
-}
 
-.help-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 40px;
-}
-
-.help-item {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 15px;
-    border-left: 4px solid #667eea;
-}
-
-.help-item h3 {
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.help-item ul {
-    list-style: none;
-}
-
-.help-item li {
-    padding: 5px 0;
-    position: relative;
-    padding-left: 25px;
-}
-
-.help-item li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #667eea;
-    font-weight: bold;
-}
-
-.help-item code {
-    background: #e9ecef;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9em;
-}
 
 /* CTA Section */
 .cta {
@@ -562,9 +457,7 @@ footer p {
     }
     
     .features-grid,
-    .steps-grid,
-    .faq-grid,
-    .help-grid {
+    .faq-grid {
         grid-template-columns: 1fr;
     }
     
@@ -576,12 +469,7 @@ footer p {
         font-size: 2rem;
     }
     
-    .step-number {
-        left: 20px;
-    }
-    
-    .feature-card,
-    .step {
+    .feature-card {
         padding: 30px 20px;
     }
 }
@@ -609,8 +497,7 @@ footer p {
         padding: 15px 10px;
     }
     
-    .faq-item,
-    .help-item {
+    .faq-item {
         padding: 20px;
     }
 }
