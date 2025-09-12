@@ -1,6 +1,6 @@
-# 🩶 Kisu Bot - User Guide
+# 🩶 Kisu Bot
 
-**Kisu** is a Discord bot that enhances your card collection experience with Nairi bot. Get notified when your favorite series spawn and easily manage your card collections!
+**Kisu** is a Discord utility and helper bot for Nairi. Get notified when your favorite series spawn and easily manage your card collections!
 
 ## 🌟 What Does Kisu Do?
 
@@ -56,13 +56,13 @@ When someone spawns cards, you'll get messages like:
 
 ### Series Wishlist Commands
 
-| Command         | What It Does                       | Example           |
-| --------------- | ---------------------------------- | ----------------- |
-| `kswa <series>` | Add a series to your wishlist      | `ksw a One Piece` |
-| `kswr <series>` | Remove a series from your wishlist | `ksw r One Piece` |
-| `kswl`          | Show your current wishlist         | `ksw l`           |
-| `ksw  @user`    | View someone else's wishlist       | `ksw l @friend`   |
-| `kswclear`      | Clear your entire wishlist         | `ksw clear`       |
+| Command         | What It Does                       | Example          |
+| --------------- | ---------------------------------- | ---------------- |
+| `kswa <series>` | Add a series to your wishlist      | `kswa One Piece` |
+| `kswr <series>` | Remove a series from your wishlist | `kswr One Piece` |
+| `kswl`          | Show your current wishlist         | `kswl`           |
+| `ksw  @user`    | View someone else's wishlist       | `kswl @friend`   |
+| `kswclear`      | Clear your entire wishlist         | `kswclear`       |
 
 ### Other Commands
 
@@ -103,32 +103,5 @@ When viewing your card collection, react with:
 - Add different series in different servers if you want
 
 ---
-
-## 🔧 Need Help?
-
-### Commands Not Working?
-
-- Make sure Kisu has the right permissions in your server
-- Try `kshelp` to verify the bot is responding
-- Double-check your command syntax
-
-### Series Not Being Detected?
-
-- Verify the series name matches what appears in Nairi exactly
-- Check recent spawn messages to see the exact format
-- Series names are case-insensitive but must be exact matches
-
-## 🚀 Ready to Get Started?
-
-**[Add Kisu to Your Server Now!](https://discord.com/oauth2/authorize?client_id=1410837711656325251)**
-
-1. Click the link above
-2. Select your Discord server
-3. Grant the required permissions
-4. Start using `kswa <series>` to build your wishlist!
-
----
-
-_Made with ❤️ for the card collection community_
 
 **Happy Collecting!** 🎴✨

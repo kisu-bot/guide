@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisu Bot - Discord Card Collection Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-emoji">🩶</span>
+                <span class="logo-text">Kisu Bot</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#commands" class="nav-link">Commands</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#invite" class="nav-link invite-btn">Add to Server</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="emoji">🩶</span>
+                    Kisu Bot
+                </h1>
+                <p class="hero-subtitle">Discord Card Collection Assistant</p>
+                <p class="hero-description">
+                    Enhance your card collection experience with Nairi bot. Get notified when your favorite series spawn and easily manage your card collections!
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1410837711656325251" class="btn btn-primary" target="_blank">
+                        <span>👉</span> Add to Server
+                    </a>
+                    <a href="#features" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="features" class="features">
+            <div class="container">
+                <h2>🌟 What Does Kisu Do?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Series Wishlist Notifications</h3>
+                        <ul>
+                            <li>Add your favorite series to a personal wishlist</li>
+                            <li>Get pinged when cards from those series spawn in your server</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗂️</div>
+                        <h3>Card Collection Tools</h3>
+                        <ul>
+                            <li>Extract all card codes from your collection pages instantly</li>
+                            <li>Calculate total wishlist values for your cards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-start">
+            <div class="container">
+                <h2>📖 Quick Start Guide</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Add Series to Your Wishlist</h3>
+                        <p>Ensure the series name matches exactly what is in Nairi (case insensitive)</p>
+                        <div class="code-block">
+                            <code>kswa Pokemon</code><br>
+                            <code>kswa Naruto</code><br>
+                            <code>kswa Attack on Titan</code>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Wait for Spawn Notifications</h3>
+                        <p>When someone spawns cards, you'll get messages like:</p>
+                        <div class="notification-example">
+                            <strong>✨ A card from your series wishlist has spawned!</strong><br>
+                            :one: Pokemon - @YourName<br>
+                            :three: Attack on Titan - @YourName
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Use Collection Tools</h3>
+                        <ol>
+                            <li>Type <code>nc</code> before viewing your collection</li>
+                            <li>React with 📝 to get all card codes on the page</li>
+                            <li>React with ❤️ to calculate wishlist values</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="commands">
+            <div class="container">
+                <h2>🎯 All Commands</h2>
+                
+                <div class="commands-section">
+                    <h3>Series Wishlist Commands</h3>
+                    <div class="table-container">
+                        <table class="commands-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>What It Does</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>kswa &lt;series&gt;</code></td>
+                                    <td>Add a series to your wishlist</td>
+                                    <td><code>kswa One Piece</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>kswr &lt;series&gt;</code></td>
+                                    <td>Remove a series from your wishlist</td>
+                                    <td><code>kswr One Piece</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>kswl</code></td>
+                                    <td>Show your current wishlist</td>
+                                    <td><code>kswl</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>kswl @user</code></td>
+                                    <td>View someone else's wishlist</td>
+                                    <td><code>kswl @friend</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>kswclear</code></td>
+                                    <td>Clear your entire wishlist</td>
+                                    <td><code>kswclear</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="commands-section">
+                    <h3>Other Commands</h3>
+                    <div class="table-container">
+                        <table class="commands-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>What It Does</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>kshelp</code></td>
+                                    <td>Show the help guide</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="commands-section">
+                    <h3>Card Collection Reactions</h3>
+                    <p>When viewing your card collection, react with:</p>
+                    <div class="reactions-grid">
+                        <div class="reaction-item">
+                            <span class="reaction-emoji">📝</span>
+                            <span>Get all card codes on the current page</span>
+                        </div>
+                        <div class="reaction-item">
+                            <span class="reaction-emoji">❤️</span>
+                            <span>Calculate total wishlist value</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>❓ Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Q: Why am I not getting notifications?</h3>
+                        <ul>
+                            <li>Check your series wishlist with <code>kswl</code> to make sure it's on your wishlist</li>
+                            <li>Make sure the series name matches exactly what appears in Nairi</li>
+                            <li>Series matching is case-insensitive but must be the exact name</li>
+                        </ul>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: How many series can I add?</h3>
+                        <ul>
+                            <li>You can have up to 10 series in your wishlist</li>
+                            <li>Focus on your favorites for the best experience</li>
+                        </ul>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Do I get notified for all spawns?</h3>
+                        <ul>
+                            <li>Only when cards from your wishlisted series spawn</li>
+                            <li>You'll only see notifications for series you've specifically added</li>
+                        </ul>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: Can I use this in multiple servers?</h3>
+                        <ul>
+                            <li>Yes! Your wishlist is separate for each Discord server</li>
+                            <li>Add different series in different servers if you want</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="help">
+            <div class="container">
+                <h2>🔧 Need Help?</h2>
+                <div class="help-grid">
+                    <div class="help-item">
+                        <h3>Commands Not Working?</h3>
+                        <ul>
+                            <li>Make sure Kisu has the right permissions in your server</li>
+                            <li>Try <code>kshelp</code> to verify the bot is responding</li>
+                            <li>Double-check your command syntax</li>
+                        </ul>
+                    </div>
+                    <div class="help-item">
+                        <h3>Series Not Being Detected?</h3>
+                        <ul>
+                            <li>Verify the series name matches what appears in Nairi exactly</li>
+                            <li>Check recent spawn messages to see the exact format</li>
+                            <li>Series names are case-insensitive but must be exact matches</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="invite" class="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>🚀 Ready to Get Started?</h2>
+                    <p>Add Kisu to your Discord server and start building your wishlist!</p>
+                    <div class="cta-steps">
+                        <ol>
+                            <li>Click the link below</li>
+                            <li>Select your Discord server</li>
+                            <li>Grant the required permissions</li>
+                            <li>Start using <code>kswa &lt;series&gt;</code> to build your wishlist!</li>
+                        </ol>
+                    </div>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1410837711656325251" class="btn btn-primary btn-large" target="_blank">
+                        Add Kisu to Your Server Now!
+                    </a>
+                    <p class="permissions-note">
+                        <em>Required Permissions: Send Messages, Use Slash Commands, Add Reactions, Read Message History</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><em>Made with ❤️ for the card collection community</em></p>
+            <p><strong>Happy Collecting!</strong> 🎴✨</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
