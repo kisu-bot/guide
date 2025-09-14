@@ -8,6 +8,7 @@
 
 - Add your favorite series to a personal series wishlist
 - Get pinged when cards from those series spawn in your server
+- Customizable limits based on your server roles (configured by admins)
 
 ### 🗂️ **Card Collection Tools**
 
@@ -26,7 +27,7 @@ _Required Permissions: Send Messages, Use Slash Commands, Add Reactions, Read Me
 
 ### Step 1: Add Series to Your Wishlist
 
-Ensure the series name matches exactly what is in Nairi (case insensitive)
+Ensure the series name matches exactly what is in Nairi (case insensitive). Your wishlist limit depends on your roles - check with server admins about role-specific limits.
 
 ```
 kswa Pokemon
@@ -79,6 +80,38 @@ When viewing your card collection, react with:
 
 ---
 
+## 🔧 Server Administrator Features
+
+### Role-Based Wishlist Limits
+
+Server admins can configure custom series wishlist limits for different roles:
+
+| Command                          | What It Does                    | Example                    |
+| -------------------------------- | ------------------------------- | -------------------------- |
+| `ksad wlrole list`               | List all configured role limits | `ksad wlrole list`         |
+| `ksad wlrole set <role> <limit>` | Set wishlist limit for a role   | `ksad wlrole set "VIP" 10` |
+| `ksad wlrole set @role <limit>`  | Set limit using role mention    | `ksad wlrole set @VIP 10`  |
+| `ksad wlrole remove <role>`      | Remove custom limit for a role  | `ksad wlrole remove "VIP"` |
+| `ksad help`                      | Show admin command help         | `ksad help`                |
+
+### Admin Configuration Rules
+
+- **Maximum Limit**: Cannot set limits higher than 15 series per role
+- **Default Limit**: Users without configured roles get 3 series
+- **Role Priority**: Users get the highest limit from their roles
+- **Server Limit**: Maximum 8 role configurations per server
+- **Permissions**: Requires Administrator or Manage Server permissions
+
+### Example Setup
+
+```
+ksad wlrole set @VIP 10        # VIP members get 10 series
+ksad wlrole set "Supporter" 7  # Supporters get 7 series
+ksad wlrole set @everyone 5    # Everyone else gets 5 series
+```
+
+---
+
 ## ❓ FAQ
 
 ### **Q: Why am I not getting notifications?**
@@ -89,8 +122,10 @@ When viewing your card collection, react with:
 
 ### **Q: How many series can I add?**
 
-- You can have up to 10 series in your wishlist
-- Focus on your favorites for the best experience
+- Your series limit depends on your roles in the server
+- Default limit is 3 series per user
+- Server admins can configure custom limits for different roles (up to 15 maximum)
+- Check with your server admins about role-specific limits
 
 ### **Q: Do I get notified for all spawns?**
 
@@ -101,6 +136,13 @@ When viewing your card collection, react with:
 
 - Yes! Your wishlist is separate for each Discord server
 - Add different series in different servers if you want
+
+### **Q: How do I configure role limits as an admin?**
+
+- You need Administrator or Manage Server permissions
+- Use `ksad wlrole` commands to configure limits for roles
+- Users get the highest limit from all their roles
+- Maximum limit per role is 15 series
 
 ---
 

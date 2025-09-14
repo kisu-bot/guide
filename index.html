@@ -53,8 +53,9 @@
                         <div class="feature-icon">📋</div>
                         <h3>Series Wishlist Notifications</h3>
                         <ul>
-                            <li>Add your favorite series to a personal wishlist</li>
+                            <li>Add your favorite series to a personal series wishlist</li>
                             <li>Get pinged when cards from those series spawn in your server</li>
+                            <li>Customizable limits based on your server roles (configured by admins)</li>
                         </ul>
                     </div>
                     <div class="feature-card">
@@ -116,6 +117,74 @@
                 </div>
 
                 <div class="commands-section">
+                    <h3>Server Administrator Commands</h3>
+                    <div class="table-container">
+                        <table class="commands-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>What It Does</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>ksad wlrole list</code></td>
+                                    <td>List all configured role limits</td>
+                                    <td><code>ksad wlrole list</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>ksad wlrole set &lt;role&gt; &lt;limit&gt;</code></td>
+                                    <td>Set wishlist limit for a role</td>
+                                    <td><code>ksad wlrole set "VIP" 10</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>ksad wlrole set @role &lt;limit&gt;</code></td>
+                                    <td>Set limit using role mention</td>
+                                    <td><code>ksad wlrole set @VIP 10</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>ksad wlrole remove &lt;role&gt;</code></td>
+                                    <td>Remove custom limit for a role</td>
+                                    <td><code>ksad wlrole remove "VIP"</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>ksad help</code></td>
+                                    <td>Show admin command help</td>
+                                    <td><code>ksad help</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="margin-top: 24px; padding: 20px; background: #f7fafc; border-radius: 8px; border-left: 4px solid #667eea;">
+                        <h4 style="margin-bottom: 12px; color: #2d3748;">Admin Configuration Rules:</h4>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
+                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
+                                <strong>Maximum Limit:</strong> Cannot set limits higher than 15 series per role
+                            </li>
+                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
+                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
+                                <strong>Default Limit:</strong> Users without configured roles get 3 series
+                            </li>
+                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
+                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
+                                <strong>Role Priority:</strong> Users get the highest limit from their roles
+                            </li>
+                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
+                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
+                                <strong>Server Limit:</strong> Maximum 8 role configurations per server
+                            </li>
+                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
+                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
+                                <strong>Permissions:</strong> Requires Administrator or Manage Server permissions
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="commands-section">
                     <h3>Other Commands</h3>
                     <div class="table-container">
                         <table class="commands-table">
@@ -167,8 +236,10 @@
                     <div class="faq-item">
                         <h3>Q: How many series can I add?</h3>
                         <ul>
-                            <li>You can have up to 10 series in your wishlist</li>
-                            <li>Focus on your favorites for the best experience</li>
+                            <li>Your series limit depends on your roles in the server</li>
+                            <li>Default limit is 3 series per user</li>
+                            <li>Server admins can configure custom limits for different roles (up to 15 maximum)</li>
+                            <li>Check with your server admins about role-specific limits</li>
                         </ul>
                     </div>
                     <div class="faq-item">
@@ -183,6 +254,15 @@
                         <ul>
                             <li>Yes! Your wishlist is separate for each Discord server</li>
                             <li>Add different series in different servers if you want</li>
+                        </ul>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Q: How do I configure role limits as an admin?</h3>
+                        <ul>
+                            <li>You need Administrator or Manage Server permissions</li>
+                            <li>Use <code>ksad wlrole</code> commands to configure limits for roles</li>
+                            <li>Users get the highest limit from all their roles</li>
+                            <li>Maximum limit per role is 15 series</li>
                         </ul>
                     </div>
                 </div>
