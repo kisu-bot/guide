@@ -96,7 +96,7 @@ Server admins can configure custom series wishlist limits for different roles:
 
 ### Admin Configuration Rules
 
-- **Maximum Limit**: Cannot set limits higher than 15 series per role
+- **Maximum Limit**: Cannot set limits higher than 10 series per role
 - **Default Limit**: Users without configured roles get 3 series
 - **Role Priority**: Users get the highest limit from their roles
 - **Server Limit**: Maximum 8 role configurations per server
