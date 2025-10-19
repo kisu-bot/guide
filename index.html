@@ -32,7 +32,7 @@
                 </h1>
                 <p class="hero-subtitle">Nairi helper bot</p>
                 <p class="hero-description">
-                    Enhance your card collection experience with Nairi bot. Get notified when your favorite series spawn and easily manage your card collections!
+                    Get notified when your favorite series spawn and easily calculate wishlist totals with Nairi bot!
                 </p>
                 <div class="hero-buttons">
                     <a href="https://discord.com/oauth2/authorize?client_id=1410837711656325251" class="btn btn-primary" target="_blank">
@@ -63,10 +63,10 @@
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">🗂️</div>
-                        <h3>Card Collection Tools</h3>
+                        <h3>Wishlist Calculation</h3>
                         <ul>
-                            <li>Extract all card codes from your collection pages instantly</li>
-                            <li>Calculate total wishlist values for your cards</li>
+                            <li>When viewing your collection with <code>nc</code>, click on the ❤️ reaction</li>
+                            <li>Kisu will total up the wishlist values on the page</li>
                         </ul>
                     </div>
                 </div>
@@ -79,6 +79,7 @@
                 
                 <div class="commands-section">
                     <h3>Series Wishlist Commands</h3>
+                    <h4>Traditional Commands</h4>
                     <div class="table-container">
                         <table class="commands-table">
                             <thead>
@@ -117,10 +118,51 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <h4>Slash Commands</h4>
+                    <div class="table-container">
+                        <table class="commands-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>What It Does</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>/series wishlist add &lt;series&gt;</code></td>
+                                    <td>Add a series to your wishlist</td>
+                                    <td><code>/series wishlist add series:One Piece</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/series wishlist remove &lt;series&gt;</code></td>
+                                    <td>Remove a series from your wishlist</td>
+                                    <td><code>/series wishlist remove series:One Piece</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/series wishlist list</code></td>
+                                    <td>Show your current wishlist</td>
+                                    <td><code>/series wishlist list</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/series wishlist list user:@friend</code></td>
+                                    <td>View someone else's wishlist</td>
+                                    <td><code>/series wishlist list user:@friend</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/series wishlist clear confirm:true</code></td>
+                                    <td>Clear your entire wishlist</td>
+                                    <td><code>/series wishlist clear confirm:true</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="commands-section">
                     <h3>Server Administrator Commands</h3>
+                    <h4>Traditional Commands</h4>
                     <div class="table-container">
                         <table class="commands-table">
                             <thead>
@@ -139,7 +181,7 @@
                                 <tr>
                                     <td><code>ksad wlrole set &lt;role&gt; &lt;limit&gt;</code></td>
                                     <td>Set wishlist limit for a role</td>
-                                    <td><code>ksad wlrole set "VIP" 10</code></td>
+                                    <td><code>ksad wlrole set "VIP" 5</code></td>
                                 </tr>
                                 <tr>
                                     <td><code>ksad wlrole set @role &lt;limit&gt;</code></td>
@@ -155,6 +197,46 @@
                                     <td><code>ksad help</code></td>
                                     <td>Show admin command help</td>
                                     <td><code>ksad help</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h4>Slash Admin Commands</h4>
+                    <div class="table-container">
+                        <table class="commands-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>What It Does</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>/admin role list</code></td>
+                                    <td>List all configured role limits</td>
+                                    <td><code>/admin role list</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/admin role set</code></td>
+                                    <td>Set wishlist limit for a role</td>
+                                    <td><code>/admin role set role:@VIP limit:5</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/admin role edit</code></td>
+                                    <td>Edit wishlist limit for a role</td>
+                                    <td><code>/admin role edit role:@VIP limit:10</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/admin role remove</code></td>
+                                    <td>Remove custom limit for a role</td>
+                                    <td><code>/admin role remove role:@VIP</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>/help</code></td>
+                                    <td>Show admin command help</td>
+                                    <td><code>/help category:admin</code></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -211,10 +293,6 @@
                     <h3>Card Collection Reactions</h3>
                     <p>When viewing your card collection, react with:</p>
                     <div class="reactions-grid">
-                        <div class="reaction-item">
-                            <span class="reaction-emoji">📝</span>
-                            <span>Get all card codes on the current page</span>
-                        </div>
                         <div class="reaction-item">
                             <span class="reaction-emoji">❤️</span>
                             <span>Calculate total wishlist value</span>

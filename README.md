@@ -1,33 +1,16 @@
 # 🩶 Kisu Bot
 
-**Kisu** is a Discord utility and helper bot for Nairi. Get notified when your favorite series spawn and easily manage your card collections!
+**Kisu** is a Discord utility and helper bot for Nairi. Get notified when your favorite series spawn and easily calculate wishlist totals!
 
 ## 🌟 What Does Kisu Do?
 
-### 📋 **Series Wishlist Notifications**
+### Wishlist Calculation
 
-- Add your favorite series to a personal series wishlist
-- Get pinged when cards from those series spawn in your server
-- Customizable limits based on your server roles (configured by admins)
+When viewing your collection with `nc`, click on the ❤️ reaction to have Kisu total up the wishlist values on the page.
 
-### 🗂️ **Card Collection Tools**
+### Series Wishlist
 
-- Extract all card codes from your collection pages instantly
-- Calculate total wishlist values for your cards
-
-## 🤖 Add Kisu to Your Server
-
-**[👉 Click Here to Invite Kisu Bot](https://discord.com/oauth2/authorize?client_id=1410837711656325251)**
-
-_Required Permissions: Send Messages, Use Slash Commands, Add Reactions, Read Message History_
-
----
-
-## 📖 Quick Start Guide
-
-### Step 1: Add Series to Your Wishlist
-
-Ensure the series name matches exactly what is in Nairi (case insensitive). Your wishlist limit depends on your roles - check with server admins about role-specific limits.
+Get notified when your favorite series spawns!
 
 ```
 kswa Pokemon
@@ -35,21 +18,11 @@ kswa Naruto
 kswa Attack on Titan
 ```
 
-### Step 2: Wait for Spawn Notifications
+## 🩶 Add Kisu to Your Server
 
-When someone spawns cards, you'll get messages like:
+**[👉 Click Here to Invite Kisu Bot](https://discord.com/oauth2/authorize?client_id=1410837711656325251)**
 
-```
-✨ **A card from your series wishlist has spawned!**
-:one: Pokemon - @YourName
-:three: Attack on Titan - @YourName
-```
-
-### Step 3: Use Collection Tools
-
-1. Type `nc` before viewing your collection
-2. React with 📝 to get all card codes on the page
-3. React with ❤️ to calculate wishlist values
+_Required Permissions: Send Messages, Use Slash Commands, Add Reactions, Read Message History_
 
 ---
 
@@ -57,25 +30,37 @@ When someone spawns cards, you'll get messages like:
 
 ### Series Wishlist Commands
 
+#### Commands
+
 | Command         | What It Does                       | Example          |
 | --------------- | ---------------------------------- | ---------------- |
 | `kswa <series>` | Add a series to your wishlist      | `kswa One Piece` |
 | `kswr <series>` | Remove a series from your wishlist | `kswr One Piece` |
 | `kswl`          | Show your current wishlist         | `kswl`           |
-| `ksw  @user`    | View someone else's wishlist       | `kswl @friend`   |
+| `kswl @user`    | View someone else's wishlist       | `kswl @friend`   |
 | `kswclear`      | Clear your entire wishlist         | `kswclear`       |
+
+#### Slash Commands
+
+| Command                               | What It Does                       | Example                                    |
+| ------------------------------------- | ---------------------------------- | ------------------------------------------ |
+| `/series wishlist add <series>`       | Add a series to your wishlist      | `/series wishlist add series:One Piece`    |
+| `/series wishlist remove <series>`    | Remove a series from your wishlist | `/series wishlist remove series:One Piece` |
+| `/series wishlist list`               | Show your current wishlist         | `/series wishlist list`                    |
+| `/series wishlist list user:@friend`  | View someone else's wishlist       | `/series wishlist list user:@friend`       |
+| `/series wishlist clear confirm:true` | Clear your entire wishlist         | `/series wishlist clear confirm:true`      |
 
 ### Other Commands
 
 | Command  | What It Does        |
 | -------- | ------------------- |
 | `kshelp` | Show the help guide |
+| `/help`  | Show the help guide |
 
-### Card Collection Reactions
+### Collection Reactions
 
 When viewing your card collection, react with:
 
-- **📝** - Get all card codes on the current page
 - **❤️** - Calculate total wishlist value
 
 ---
@@ -86,13 +71,25 @@ When viewing your card collection, react with:
 
 Server admins can configure custom series wishlist limits for different roles:
 
+#### Admin Commands
+
 | Command                          | What It Does                    | Example                    |
 | -------------------------------- | ------------------------------- | -------------------------- |
 | `ksad wlrole list`               | List all configured role limits | `ksad wlrole list`         |
-| `ksad wlrole set <role> <limit>` | Set wishlist limit for a role   | `ksad wlrole set "VIP" 10` |
-| `ksad wlrole set @role <limit>`  | Set limit using role mention    | `ksad wlrole set @VIP 10`  |
-| `ksad wlrole remove <role>`      | Remove custom limit for a role  | `ksad wlrole remove "VIP"` |
+| `ksad wlrole set @role <limit>`  | Set wishlist limit for a role   | `ksad wlrole set @VIP 5`   |
+| `ksad wlrole edit @role <limit>` | Edit wishlist limit for a role  | `ksad wlrole edit @VIP 10` |
+| `ksad wlrole remove @role`       | Remove custom limit for a role  | `ksad wlrole remove @VIP`  |
 | `ksad help`                      | Show admin command help         | `ksad help`                |
+
+#### Slash Admin Commands
+
+| Command              | What It Does                    | Example                               |
+| -------------------- | ------------------------------- | ------------------------------------- |
+| `/admin role list`   | List all configured role limits | `/admin role list`                    |
+| `/admin role set`    | Set wishlist limit for a role   | `/admin role set role:@VIP limit:5`   |
+| `/admin role edit`   | Edit wishlist limit for a role  | `/admin role edit role:@VIP limit:10` |
+| `/admin role remove` | Remove custom limit for a role  | `/admin role remove role:@VIP`        |
+| `/help`              | Show admin command help         | `/help category:admin`                |
 
 ### Admin Configuration Rules
 
@@ -104,46 +101,18 @@ Server admins can configure custom series wishlist limits for different roles:
 
 ### Example Setup
 
+**Traditional Commands:**
+
 ```
 ksad wlrole set @VIP 10        # VIP members get 10 series
-ksad wlrole set "Supporter" 7  # Supporters get 7 series
+ksad wlrole set @Supporter 7   # Supporters get 7 series
 ksad wlrole set @everyone 5    # Everyone else gets 5 series
 ```
 
----
+**Slash Commands:**
 
-## ❓ FAQ
-
-### **Q: Why am I not getting notifications?**
-
-- Check your series wishlist with `kswl` to make sure it's on your wishlist
-- Make sure the series name matches exactly what appears in Nairi
-- Series matching is case-insensitive but must be the exact name
-
-### **Q: How many series can I add?**
-
-- Your series limit depends on your roles in the server
-- Default limit is 3 series per user
-- Server admins can configure custom limits for different roles (up to 15 maximum)
-- Check with your server admins about role-specific limits
-
-### **Q: Do I get notified for all spawns?**
-
-- Only when cards from your wishlisted series spawn
-- You'll only see notifications for series you've specifically added
-
-### **Q: Can I use this in multiple servers?**
-
-- Yes! Your wishlist is separate for each Discord server
-- Add different series in different servers if you want
-
-### **Q: How do I configure role limits as an admin?**
-
-- You need Administrator or Manage Server permissions
-- Use `ksad wlrole` commands to configure limits for roles
-- Users get the highest limit from all their roles
-- Maximum limit per role is 15 series
-
----
-
-**Happy Collecting!** 🎴✨
+```
+/admin role set role:@VIP limit:10           # VIP members get 10 series
+/admin role set role:@Supporter limit:7      # Supporters get 7 series
+/admin role set role:@everyone limit:5       # Everyone else gets 5 series
+```
