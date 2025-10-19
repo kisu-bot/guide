@@ -38,7 +38,6 @@
                     <a href="https://discord.com/oauth2/authorize?client_id=1410837711656325251" class="btn btn-primary" target="_blank">
                         <span>👉</span> Add to Server
                     </a>
-                    <a href="#features" class="btn btn-secondary">Learn More</a>
                 </div>
             </div>
         </div>
@@ -75,11 +74,35 @@
 
         <section id="commands" class="commands">
             <div class="container">
-                <h2>🎯 All Commands</h2>
+                <h2>Commands</h2>
                 
                 <div class="commands-section">
+                    <h3>Basic Commands</h3>
+                    <div class="table-container">
+                        <table class="commands-table">
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>What It Does</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>kshelp</code></td>
+                                    <td>Show the help guide</td>
+                                </tr>
+                                <tr>
+                                    <td><code>/help</code></td>
+                                    <td>Show the help guide</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="commands-section">
                     <h3>Series Wishlist Commands</h3>
-                    <h4>Traditional Commands</h4>
+                    <h4>Commands</h4>
                     <div class="table-container">
                         <table class="commands-table">
                             <thead>
@@ -161,8 +184,8 @@
                 </div>
 
                 <div class="commands-section">
-                    <h3>Server Administrator Commands</h3>
-                    <h4>Traditional Commands</h4>
+                    <h3>Server Admin Commands</h3>
+                    <h4>Commands</h4>
                     <div class="table-container">
                         <table class="commands-table">
                             <thead>
@@ -270,26 +293,6 @@
                 </div>
 
                 <div class="commands-section">
-                    <h3>Other Commands</h3>
-                    <div class="table-container">
-                        <table class="commands-table">
-                            <thead>
-                                <tr>
-                                    <th>Command</th>
-                                    <th>What It Does</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>kshelp</code></td>
-                                    <td>Show the help guide</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="commands-section">
                     <h3>Card Collection Reactions</h3>
                     <p>When viewing your card collection, react with:</p>
                     <div class="reactions-grid">
@@ -302,54 +305,7 @@
             </div>
         </section>
 
-        <section id="faq" class="faq">
-            <div class="container">
-                <h2>❓ Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h3>Q: Why am I not getting notifications?</h3>
-                        <ul>
-                            <li>Check your series wishlist with <code>kswl</code> to make sure it's on your wishlist</li>
-                            <li>Make sure the series name matches exactly what appears in Nairi</li>
-                            <li>Series matching is case-insensitive but must be the exact name</li>
-                        </ul>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: How many series can I add?</h3>
-                        <ul>
-                            <li>Your series limit depends on your roles in the server</li>
-                            <li>Default limit is 3 series per user</li>
-                            <li>Server admins can configure custom limits for different roles (up to 10 maximum)</li>
-                            <li>Check with your server admins about role-specific limits</li>
-                        </ul>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Do I get notified for all spawns?</h3>
-                        <ul>
-                            <li>Only when cards from your wishlisted series spawn</li>
-                            <li>You'll only see notifications for series you've specifically added</li>
-                        </ul>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: Can I use this in multiple servers?</h3>
-                        <ul>
-                            <li>Yes! Your wishlist is separate for each Discord server</li>
-                            <li>Add different series in different servers if you want</li>
-                        </ul>
-                    </div>
-                    <div class="faq-item">
-                        <h3>Q: How do I configure role limits as an admin?</h3>
-                        <ul>
-                            <li>You need Administrator or Manage Server permissions</li>
-                            <li>Use <code>ksad wlrole</code> commands to configure limits for roles</li>
-                            <li>Users get the highest limit from all their roles</li>
-                            <li>Maximum limit per role is 10 series</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+       
         <section id="invite" class="cta">
             <div class="container">
                 <div class="cta-content">
@@ -373,13 +329,6 @@
             </div>
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p><em>Made with ❤️ for the card collection community</em></p>
-            <p><strong>Happy Collecting!</strong> 🎴✨</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
