@@ -94,7 +94,6 @@ Server admins can configure custom series wishlist limits for different roles:
 | `/admin role set`    | Set wishlist limit for a role   | `/admin role set role:@VIP limit:5`   |
 | `/admin role edit`   | Edit wishlist limit for a role  | `/admin role edit role:@VIP limit:10` |
 | `/admin role remove` | Remove custom limit for a role  | `/admin role remove role:@VIP`        |
-| `/help`              | Show admin command help         | `/help category:admin`                |
 
 ### Admin Configuration Rules
 
