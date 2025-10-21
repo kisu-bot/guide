@@ -8,6 +8,10 @@
 
 When viewing your collection with `nc`, click on the ❤️ reaction to have Kisu total up the wishlist values on the page.
 
+### Collection Filter Generation
+
+When viewing `nsl` or `nwl`, click on the ✏️ reaction to have Kisu generate collection filter strings for you to use to easily search collections.
+
 ### Series Wishlist
 
 Get notified when your favorite series spawns!
@@ -62,6 +66,7 @@ _Required Permissions: Send Messages, Use Slash Commands, Add Reactions, Read Me
 When viewing your card collection, react with:
 
 - **❤️** - Calculate total wishlist value
+- **✏️** - Generate collection filter strings from Characters Collected or Wish List embeds
 
 ---
 

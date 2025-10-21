@@ -30,7 +30,7 @@
                     <span class="emoji">🩶</span>
                     Kisu Bot
                 </h1>
-                <p class="hero-subtitle">Nairi helper bot that helps you calculate wishlist totals and notifies you when your favorite series spawn!</p>
+                <p class="hero-subtitle">Discord utility and helper bot for Nairi. Calculates wishlist totals, generates collection filter strings, and more!</p>
                 <div class="hero-buttons">
                     <a href="https://discord.com/oauth2/authorize?client_id=1410837711656325251" class="btn btn-primary" target="_blank">
                         <span>👉</span> Add to Server
@@ -46,6 +46,23 @@
                 <h2>🌟 What Does Kisu Do?</h2>
                 <div class="features-grid">
                     <div class="feature-card">
+                        <div class="feature-icon">🗂️</div>
+                        <h3>Wishlist Calculation</h3>
+                        <ul>
+                            <li>When viewing your collection with <code>nc</code>, click on the ❤️ reaction</li>
+                            <li>Kisu will total up the wishlist values on the page</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✏️</div>
+                        <h3>Collection Filter Generation</h3>
+                        <ul>
+                            <li>When viewing <code>nsl</code> or <code>nwl</code>, click on the ✏️ reaction</li>
+                            <li>Kisu generates collection filter strings for easy searching</li>
+                            <li>Works across multiple pages and updates automatically</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
                         <div class="feature-icon">📋</div>
                         <h3>Series Wishlist Notifications</h3>
                         <ul>
@@ -56,14 +73,6 @@
                         <p style="margin-top: 16px; font-size: 0.9rem; color: #6b7280; font-style: italic; text-align: center;">
                             💡 Inspired by <a href="https://hollow.zeing.xyz/" target="_blank" style="color: #667eea; text-decoration: none;">Hollow bot</a>
                         </p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🗂️</div>
-                        <h3>Wishlist Calculation</h3>
-                        <ul>
-                            <li>When viewing your collection with <code>nc</code>, click on the ❤️ reaction</li>
-                            <li>Kisu will total up the wishlist values on the page</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -199,19 +208,19 @@
                                     <td><code>ksad wlrole list</code></td>
                                 </tr>
                                 <tr>
-                                    <td><code>ksad wlrole set &lt;role&gt; &lt;limit&gt;</code></td>
-                                    <td>Set wishlist limit for a role</td>
-                                    <td><code>ksad wlrole set "VIP" 5</code></td>
-                                </tr>
-                                <tr>
                                     <td><code>ksad wlrole set @role &lt;limit&gt;</code></td>
-                                    <td>Set limit using role mention</td>
-                                    <td><code>ksad wlrole set @VIP 10</code></td>
+                                    <td>Set wishlist limit for a role</td>
+                                    <td><code>ksad wlrole set @VIP 5</code></td>
                                 </tr>
                                 <tr>
-                                    <td><code>ksad wlrole remove &lt;role&gt;</code></td>
+                                    <td><code>ksad wlrole edit @role &lt;limit&gt;</code></td>
+                                    <td>Edit wishlist limit for a role</td>
+                                    <td><code>ksad wlrole edit @VIP 10</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>ksad wlrole remove @role</code></td>
                                     <td>Remove custom limit for a role</td>
-                                    <td><code>ksad wlrole remove "VIP"</code></td>
+                                    <td><code>ksad wlrole remove @VIP</code></td>
                                 </tr>
                                 <tr>
                                     <td><code>ksad help</code></td>
@@ -287,15 +296,41 @@
                             </li>
                         </ul>
                     </div>
+
+                    <div style="margin-top: 24px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9;">
+                        <h4 style="margin-bottom: 16px; color: #0c4a6e;">Example Setup</h4>
+                        
+                        <div style="margin-bottom: 16px;">
+                            <h5 style="margin-bottom: 8px; color: #0c4a6e; font-size: 0.95rem;">Traditional Commands:</h5>
+                            <div style="background: #1e293b; color: #e2e8f0; padding: 12px; border-radius: 6px; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 0.85rem; overflow-x: auto;">
+                                <div>ksad wlrole set @VIP 10        <span style="color: #64748b;"># VIP members get 10 series</span></div>
+                                <div>ksad wlrole set @Supporter 7   <span style="color: #64748b;"># Supporters get 7 series</span></div>
+                                <div>ksad wlrole set @everyone 5    <span style="color: #64748b;"># Everyone else gets 5 series</span></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h5 style="margin-bottom: 8px; color: #0c4a6e; font-size: 0.95rem;">Slash Commands:</h5>
+                            <div style="background: #1e293b; color: #e2e8f0; padding: 12px; border-radius: 6px; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 0.85rem; overflow-x: auto;">
+                                <div>/admin role set role:@VIP limit:10           <span style="color: #64748b;"># VIP members get 10 series</span></div>
+                                <div>/admin role set role:@Supporter limit:7      <span style="color: #64748b;"># Supporters get 7 series</span></div>
+                                <div>/admin role set role:@everyone limit:5       <span style="color: #64748b;"># Everyone else gets 5 series</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="commands-section">
-                    <h3>Card Collection Reactions</h3>
+                    <h3>Collection Reactions</h3>
                     <p>When viewing your card collection, react with:</p>
                     <div class="reactions-grid">
                         <div class="reaction-item">
                             <span class="reaction-emoji">❤️</span>
                             <span>Calculate total wishlist value</span>
+                        </div>
+                        <div class="reaction-item">
+                            <span class="reaction-emoji">✏️</span>
+                            <span>Generate collection filter strings from `nsl` or `nwl`</span>
                         </div>
                     </div>
                 </div>
