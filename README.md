@@ -1,6 +1,6 @@
 # 🩶 Kisu Bot
 
-**Kisu** is a Discord utility and helper bot for Nairi. Get notified when your favorite series spawn and easily calculate wishlist totals!
+**Kisu** is a Discord utility and helper bot for Nairi. Calculates wishlist totals, generates collection filter strings, and more!
 
 ## 🌟 What Does Kisu Do?
 
@@ -66,7 +66,7 @@ _Required Permissions: Send Messages, Use Slash Commands, Add Reactions, Read Me
 When viewing your card collection, react with:
 
 - **❤️** - Calculate total wishlist value
-- **✏️** - Generate collection filter strings from Characters Collected or Wish List embeds
+- **✏️** - Generate collection filter strings from `nsl` or `nwl`
 
 ---
 
