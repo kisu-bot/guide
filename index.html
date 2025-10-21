@@ -1,367 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kisu Bot</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-emoji">🩶</span>
-                <span class="logo-text">Kisu Bot</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#commands" class="nav-link">Commands</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
-                <li><a href="#invite" class="nav-link invite-btn">Add to Server</a></li>
-            </ul>
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-emoji">🩶</span>
+          <span class="logo-text">Kisu Bot</span>
         </div>
+        <ul class="nav-menu">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#commands" class="nav-link">Commands</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li>
+            <a href="#invite" class="nav-link invite-btn">Add to Server</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="emoji">🩶</span>
-                    Kisu Bot
-                </h1>
-                <p class="hero-subtitle">Discord utility and helper bot for Nairi. Calculates wishlist totals, generates collection filter strings, and more!</p>
-                <div class="hero-buttons">
-                    <a href="https://discord.com/oauth2/authorize?client_id=1410837711656325251" class="btn btn-primary" target="_blank">
-                        <span>👉</span> Add to Server
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="emoji">🩶</span>
+            Kisu Bot
+          </h1>
+          <p class="hero-subtitle">
+            Discord utility and helper bot for Nairi. Calculates wishlist
+            totals, generates collection filter strings, and more!
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=1410837711656325251"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              <span>👉</span> Add to Server
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <main>
-        <section id="features" class="features">
-            <div class="container">
-                <h2>🌟 What Does Kisu Do?</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🗂️</div>
-                        <h3>Wishlist Calculation</h3>
-                        <ul>
-                            <li>When viewing your collection with <code>nc</code>, click on the ❤️ reaction</li>
-                            <li>Kisu will total up the wishlist values on the page</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">✏️</div>
-                        <h3>Collection Filter Generation</h3>
-                        <ul>
-                            <li>When viewing <code>nsl</code> or <code>nwl</code>, click on the ✏️ reaction</li>
-                            <li>Kisu generates collection filter strings for easy searching</li>
-                            <li>Works across multiple pages and updates automatically</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">📋</div>
-                        <h3>Series Wishlist Notifications</h3>
-                        <ul>
-                            <li>Add your favorite series to a personal series wishlist</li>
-                            <li>Get pinged when cards from those series spawn in your server</li>
-                            <li>Customizable limits based on your server roles (configured by admins)</li>
-                        </ul>
-                        <p style="margin-top: 16px; font-size: 0.9rem; color: #6b7280; font-style: italic; text-align: center;">
-                            💡 Inspired by <a href="https://hollow.zeing.xyz/" target="_blank" style="color: #667eea; text-decoration: none;">Hollow bot</a>
-                        </p>
-                    </div>
-                </div>
+      <section id="features" class="features">
+        <div class="container">
+          <h2>🌟 What Does Kisu Do?</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🗂️</div>
+              <h3>Wishlist Calculation</h3>
+              <ul>
+                <li>
+                  When viewing your collection with <code>nc</code>, click on
+                  the ❤️ reaction
+                </li>
+                <li>Kisu will total up the wishlist values on the page</li>
+              </ul>
             </div>
-        </section>
-
-        <section id="commands" class="commands">
-            <div class="container">
-                <h2>Commands</h2>
-                
-                <div class="commands-section">
-                    <h3>Basic Commands</h3>
-                    <div class="table-container">
-                        <table class="commands-table">
-                            <thead>
-                                <tr>
-                                    <th>Command</th>
-                                    <th>What It Does</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>kshelp</code></td>
-                                    <td>Show the help guide</td>
-                                </tr>
-                                <tr>
-                                    <td><code>/help</code></td>
-                                    <td>Show the help guide</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="commands-section">
-                    <h3>Series Wishlist Commands</h3>
-                    <h4>Commands</h4>
-                    <div class="table-container">
-                        <table class="commands-table">
-                            <thead>
-                                <tr>
-                                    <th>Command</th>
-                                    <th>What It Does</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>kswa &lt;series&gt;</code></td>
-                                    <td>Add a series to your wishlist</td>
-                                    <td><code>kswa One Piece</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>kswr &lt;series&gt;</code></td>
-                                    <td>Remove a series from your wishlist</td>
-                                    <td><code>kswr One Piece</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>kswl</code></td>
-                                    <td>Show your current wishlist</td>
-                                    <td><code>kswl</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>kswl @user</code></td>
-                                    <td>View someone else's wishlist</td>
-                                    <td><code>kswl @friend</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>kswclear</code></td>
-                                    <td>Clear your entire wishlist</td>
-                                    <td><code>kswclear</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h4>Slash Commands</h4>
-                    <div class="table-container">
-                        <table class="commands-table">
-                            <thead>
-                                <tr>
-                                    <th>Command</th>
-                                    <th>What It Does</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>/series wishlist add &lt;series&gt;</code></td>
-                                    <td>Add a series to your wishlist</td>
-                                    <td><code>/series wishlist add series:One Piece</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/series wishlist remove &lt;series&gt;</code></td>
-                                    <td>Remove a series from your wishlist</td>
-                                    <td><code>/series wishlist remove series:One Piece</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/series wishlist list</code></td>
-                                    <td>Show your current wishlist</td>
-                                    <td><code>/series wishlist list</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/series wishlist list user:@friend</code></td>
-                                    <td>View someone else's wishlist</td>
-                                    <td><code>/series wishlist list user:@friend</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/series wishlist clear confirm:true</code></td>
-                                    <td>Clear your entire wishlist</td>
-                                    <td><code>/series wishlist clear confirm:true</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="commands-section">
-                    <h3>Server Admin Commands</h3>
-                    <h4>Commands</h4>
-                    <div class="table-container">
-                        <table class="commands-table">
-                            <thead>
-                                <tr>
-                                    <th>Command</th>
-                                    <th>What It Does</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>ksad wlrole list</code></td>
-                                    <td>List all configured role limits</td>
-                                    <td><code>ksad wlrole list</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>ksad wlrole set @role &lt;limit&gt;</code></td>
-                                    <td>Set wishlist limit for a role</td>
-                                    <td><code>ksad wlrole set @VIP 5</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>ksad wlrole edit @role &lt;limit&gt;</code></td>
-                                    <td>Edit wishlist limit for a role</td>
-                                    <td><code>ksad wlrole edit @VIP 10</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>ksad wlrole remove @role</code></td>
-                                    <td>Remove custom limit for a role</td>
-                                    <td><code>ksad wlrole remove @VIP</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>ksad help</code></td>
-                                    <td>Show admin command help</td>
-                                    <td><code>ksad help</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h4>Slash Admin Commands</h4>
-                    <div class="table-container">
-                        <table class="commands-table">
-                            <thead>
-                                <tr>
-                                    <th>Command</th>
-                                    <th>What It Does</th>
-                                    <th>Example</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><code>/admin role list</code></td>
-                                    <td>List all configured role limits</td>
-                                    <td><code>/admin role list</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/admin role set</code></td>
-                                    <td>Set wishlist limit for a role</td>
-                                    <td><code>/admin role set role:@VIP limit:5</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/admin role edit</code></td>
-                                    <td>Edit wishlist limit for a role</td>
-                                    <td><code>/admin role edit role:@VIP limit:10</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/admin role remove</code></td>
-                                    <td>Remove custom limit for a role</td>
-                                    <td><code>/admin role remove role:@VIP</code></td>
-                                </tr>
-                                <tr>
-                                    <td><code>/help</code></td>
-                                    <td>Show admin command help</td>
-                                    <td><code>/help category:admin</code></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div style="margin-top: 24px; padding: 20px; background: #f7fafc; border-radius: 8px; border-left: 4px solid #667eea;">
-                        <h4 style="margin-bottom: 12px; color: #2d3748;">Admin Configuration Rules:</h4>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
-                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
-                                <strong>Maximum Limit:</strong> Cannot set limits higher than 10 series per role
-                            </li>
-                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
-                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
-                                <strong>Default Limit:</strong> Users without configured roles get 3 series
-                            </li>
-                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
-                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
-                                <strong>Role Priority:</strong> Users get the highest limit from their roles
-                            </li>
-                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
-                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
-                                <strong>Server Limit:</strong> Maximum 8 role configurations per server
-                            </li>
-                            <li style="padding: 4px 0; position: relative; padding-left: 20px; color: #4a5568; font-size: 0.95rem;">
-                                <span style="content: '•'; position: absolute; left: 0; color: #667eea; font-weight: bold;">•</span>
-                                <strong>Permissions:</strong> Requires Administrator or Manage Server permissions
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div style="margin-top: 24px; padding: 20px; background: #f0f9ff; border-radius: 8px; border-left: 4px solid #0ea5e9;">
-                        <h4 style="margin-bottom: 16px; color: #0c4a6e;">Example Setup</h4>
-                        
-                        <div style="margin-bottom: 16px;">
-                            <h5 style="margin-bottom: 8px; color: #0c4a6e; font-size: 0.95rem;">Traditional Commands:</h5>
-                            <div style="background: #1e293b; color: #e2e8f0; padding: 12px; border-radius: 6px; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 0.85rem; overflow-x: auto;">
-                                <div>ksad wlrole set @VIP 10        <span style="color: #64748b;"># VIP members get 10 series</span></div>
-                                <div>ksad wlrole set @Supporter 7   <span style="color: #64748b;"># Supporters get 7 series</span></div>
-                                <div>ksad wlrole set @everyone 5    <span style="color: #64748b;"># Everyone else gets 5 series</span></div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h5 style="margin-bottom: 8px; color: #0c4a6e; font-size: 0.95rem;">Slash Commands:</h5>
-                            <div style="background: #1e293b; color: #e2e8f0; padding: 12px; border-radius: 6px; font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; font-size: 0.85rem; overflow-x: auto;">
-                                <div>/admin role set role:@VIP limit:10           <span style="color: #64748b;"># VIP members get 10 series</span></div>
-                                <div>/admin role set role:@Supporter limit:7      <span style="color: #64748b;"># Supporters get 7 series</span></div>
-                                <div>/admin role set role:@everyone limit:5       <span style="color: #64748b;"># Everyone else gets 5 series</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="commands-section">
-                    <h3>Collection Reactions</h3>
-                    <p>When viewing your card collection, react with:</p>
-                    <div class="reactions-grid">
-                        <div class="reaction-item">
-                            <span class="reaction-emoji">❤️</span>
-                            <span>Calculate total wishlist value</span>
-                        </div>
-                        <div class="reaction-item">
-                            <span class="reaction-emoji">✏️</span>
-                            <span>Generate collection filter strings from `nsl` or `nwl`</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="feature-card">
+              <div class="feature-icon">✏️</div>
+              <h3>Collection Filter Generation</h3>
+              <ul>
+                <li>
+                  When viewing <code>nsl</code> or <code>nwl</code>, click on
+                  the ✏️ reaction
+                </li>
+                <li>
+                  Kisu generates collection filter strings for easy searching
+                </li>
+              </ul>
             </div>
-        </section>
-
-       
-        <section id="invite" class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>🚀 Ready to Get Started?</h2>
-                    <p>Add Kisu to your Discord server and start building your wishlist!</p>
-                    <div class="cta-steps">
-                        <ol>
-                            <li>Click the link below</li>
-                            <li>Select your Discord server</li>
-                            <li>Grant the required permissions</li>
-                            <li>Start using <code>kswa &lt;series&gt;</code> to build your wishlist!</li>
-                        </ol>
-                    </div>
-                    <a href="https://discord.com/oauth2/authorize?client_id=1410837711656325251" class="btn btn-primary btn-large" target="_blank">
-                        Add Kisu to Your Server Now!
-                    </a>
-                    <p class="permissions-note">
-                        <em>Required Permissions: Send Messages, Use Slash Commands, Add Reactions, Read Message History</em>
-                    </p>
-                </div>
+            <div class="feature-card">
+              <div class="feature-icon">📋</div>
+              <h3>Series Wishlist Notifications</h3>
+              <ul>
+                <li>Add your favorite series to a personal series wishlist</li>
+                <li>
+                  Get pinged when cards from those series spawn in your server
+                </li>
+                <li>
+                  Customizable limits based on your server roles (configured by
+                  admins)
+                </li>
+              </ul>
+              <p
+                style="
+                  margin-top: 16px;
+                  font-size: 0.9rem;
+                  color: #6b7280;
+                  font-style: italic;
+                  text-align: center;
+                "
+              >
+                💡 Inspired by
+                <a
+                  href="https://hollow.zeing.xyz/"
+                  target="_blank"
+                  style="color: #667eea; text-decoration: none"
+                  >Hollow bot</a
+                >
+              </p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="commands" class="commands">
+        <div class="container">
+          <h2>Commands</h2>
+
+          <div class="commands-section">
+            <h3>Basic Commands</h3>
+            <div class="table-container">
+              <table class="commands-table">
+                <thead>
+                  <tr>
+                    <th>Command</th>
+                    <th>What It Does</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>kshelp</code></td>
+                    <td>Show the help guide</td>
+                  </tr>
+                  <tr>
+                    <td><code>/help</code></td>
+                    <td>Show the help guide</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="commands-section">
+            <h3>Series Wishlist Commands</h3>
+            <h4>Commands</h4>
+            <div class="table-container">
+              <table class="commands-table">
+                <thead>
+                  <tr>
+                    <th>Command</th>
+                    <th>What It Does</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>kswa &lt;series&gt;</code></td>
+                    <td>Add a series to your wishlist</td>
+                    <td><code>kswa One Piece</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>kswr &lt;series&gt;</code></td>
+                    <td>Remove a series from your wishlist</td>
+                    <td><code>kswr One Piece</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>kswl</code></td>
+                    <td>Show your current wishlist</td>
+                    <td><code>kswl</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>kswl @user</code></td>
+                    <td>View someone else's wishlist</td>
+                    <td><code>kswl @friend</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>kswclear</code></td>
+                    <td>Clear your entire wishlist</td>
+                    <td><code>kswclear</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>Slash Commands</h4>
+            <div class="table-container">
+              <table class="commands-table">
+                <thead>
+                  <tr>
+                    <th>Command</th>
+                    <th>What It Does</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>/series wishlist add &lt;series&gt;</code></td>
+                    <td>Add a series to your wishlist</td>
+                    <td><code>/series wishlist add series:One Piece</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/series wishlist remove &lt;series&gt;</code></td>
+                    <td>Remove a series from your wishlist</td>
+                    <td>
+                      <code>/series wishlist remove series:One Piece</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>/series wishlist list</code></td>
+                    <td>Show your current wishlist</td>
+                    <td><code>/series wishlist list</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/series wishlist list user:@friend</code></td>
+                    <td>View someone else's wishlist</td>
+                    <td><code>/series wishlist list user:@friend</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/series wishlist clear confirm:true</code></td>
+                    <td>Clear your entire wishlist</td>
+                    <td><code>/series wishlist clear confirm:true</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="commands-section">
+            <h3>Server Admin Commands</h3>
+            <h4>Commands</h4>
+            <div class="table-container">
+              <table class="commands-table">
+                <thead>
+                  <tr>
+                    <th>Command</th>
+                    <th>What It Does</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>ksad wlrole list</code></td>
+                    <td>List all configured role limits</td>
+                    <td><code>ksad wlrole list</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>ksad wlrole set @role &lt;limit&gt;</code></td>
+                    <td>Set wishlist limit for a role</td>
+                    <td><code>ksad wlrole set @VIP 5</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>ksad wlrole edit @role &lt;limit&gt;</code></td>
+                    <td>Edit wishlist limit for a role</td>
+                    <td><code>ksad wlrole edit @VIP 10</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>ksad wlrole remove @role</code></td>
+                    <td>Remove custom limit for a role</td>
+                    <td><code>ksad wlrole remove @VIP</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>ksad help</code></td>
+                    <td>Show admin command help</td>
+                    <td><code>ksad help</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>Slash Admin Commands</h4>
+            <div class="table-container">
+              <table class="commands-table">
+                <thead>
+                  <tr>
+                    <th>Command</th>
+                    <th>What It Does</th>
+                    <th>Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>/admin role list</code></td>
+                    <td>List all configured role limits</td>
+                    <td><code>/admin role list</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/admin role set</code></td>
+                    <td>Set wishlist limit for a role</td>
+                    <td><code>/admin role set role:@VIP limit:5</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/admin role edit</code></td>
+                    <td>Edit wishlist limit for a role</td>
+                    <td><code>/admin role edit role:@VIP limit:10</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/admin role remove</code></td>
+                    <td>Remove custom limit for a role</td>
+                    <td><code>/admin role remove role:@VIP</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>/help</code></td>
+                    <td>Show admin command help</td>
+                    <td><code>/help category:admin</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              style="
+                margin-top: 24px;
+                padding: 20px;
+                background: #f7fafc;
+                border-radius: 8px;
+                border-left: 4px solid #667eea;
+              "
+            >
+              <h4 style="margin-bottom: 12px; color: #2d3748">
+                Admin Configuration Rules:
+              </h4>
+              <ul style="list-style: none; padding-left: 0">
+                <li
+                  style="
+                    padding: 4px 0;
+                    position: relative;
+                    padding-left: 20px;
+                    color: #4a5568;
+                    font-size: 0.95rem;
+                  "
+                >
+                  <span
+                    style="
+                      content: '•';
+                      position: absolute;
+                      left: 0;
+                      color: #667eea;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Maximum Limit:</strong> Cannot set limits higher than
+                  10 series per role
+                </li>
+                <li
+                  style="
+                    padding: 4px 0;
+                    position: relative;
+                    padding-left: 20px;
+                    color: #4a5568;
+                    font-size: 0.95rem;
+                  "
+                >
+                  <span
+                    style="
+                      content: '•';
+                      position: absolute;
+                      left: 0;
+                      color: #667eea;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Default Limit:</strong> Users without configured roles
+                  get 3 series
+                </li>
+                <li
+                  style="
+                    padding: 4px 0;
+                    position: relative;
+                    padding-left: 20px;
+                    color: #4a5568;
+                    font-size: 0.95rem;
+                  "
+                >
+                  <span
+                    style="
+                      content: '•';
+                      position: absolute;
+                      left: 0;
+                      color: #667eea;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Role Priority:</strong> Users get the highest limit
+                  from their roles
+                </li>
+                <li
+                  style="
+                    padding: 4px 0;
+                    position: relative;
+                    padding-left: 20px;
+                    color: #4a5568;
+                    font-size: 0.95rem;
+                  "
+                >
+                  <span
+                    style="
+                      content: '•';
+                      position: absolute;
+                      left: 0;
+                      color: #667eea;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Server Limit:</strong> Maximum 8 role configurations
+                  per server
+                </li>
+                <li
+                  style="
+                    padding: 4px 0;
+                    position: relative;
+                    padding-left: 20px;
+                    color: #4a5568;
+                    font-size: 0.95rem;
+                  "
+                >
+                  <span
+                    style="
+                      content: '•';
+                      position: absolute;
+                      left: 0;
+                      color: #667eea;
+                      font-weight: bold;
+                    "
+                    >•</span
+                  >
+                  <strong>Permissions:</strong> Requires Administrator or Manage
+                  Server permissions
+                </li>
+              </ul>
+            </div>
+
+            <div
+              style="
+                margin-top: 24px;
+                padding: 20px;
+                background: #f0f9ff;
+                border-radius: 8px;
+                border-left: 4px solid #0ea5e9;
+              "
+            >
+              <h4 style="margin-bottom: 16px; color: #0c4a6e">Example Setup</h4>
+
+              <div style="margin-bottom: 16px">
+                <h5
+                  style="margin-bottom: 8px; color: #0c4a6e; font-size: 0.95rem"
+                >
+                  Traditional Commands:
+                </h5>
+                <div
+                  style="
+                    background: #1e293b;
+                    color: #e2e8f0;
+                    padding: 12px;
+                    border-radius: 6px;
+                    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+                    font-size: 0.85rem;
+                    overflow-x: auto;
+                  "
+                >
+                  <div>
+                    ksad wlrole set @VIP 10
+                    <span style="color: #64748b"
+                      ># VIP members get 10 series</span
+                    >
+                  </div>
+                  <div>
+                    ksad wlrole set @Supporter 7
+                    <span style="color: #64748b"
+                      ># Supporters get 7 series</span
+                    >
+                  </div>
+                  <div>
+                    ksad wlrole set @everyone 5
+                    <span style="color: #64748b"
+                      ># Everyone else gets 5 series</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h5
+                  style="margin-bottom: 8px; color: #0c4a6e; font-size: 0.95rem"
+                >
+                  Slash Commands:
+                </h5>
+                <div
+                  style="
+                    background: #1e293b;
+                    color: #e2e8f0;
+                    padding: 12px;
+                    border-radius: 6px;
+                    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+                    font-size: 0.85rem;
+                    overflow-x: auto;
+                  "
+                >
+                  <div>
+                    /admin role set role:@VIP limit:10
+                    <span style="color: #64748b"
+                      ># VIP members get 10 series</span
+                    >
+                  </div>
+                  <div>
+                    /admin role set role:@Supporter limit:7
+                    <span style="color: #64748b"
+                      ># Supporters get 7 series</span
+                    >
+                  </div>
+                  <div>
+                    /admin role set role:@everyone limit:5
+                    <span style="color: #64748b"
+                      ># Everyone else gets 5 series</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="commands-section">
+            <h3>Collection Reactions</h3>
+            <p>When viewing your card collection, react with:</p>
+            <div class="reactions-grid">
+              <div class="reaction-item">
+                <span class="reaction-emoji">❤️</span>
+                <span>Calculate total wishlist value</span>
+              </div>
+              <div class="reaction-item">
+                <span class="reaction-emoji">✏️</span>
+                <span
+                  >Generate collection filter strings from `nsl` or `nwl`</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="invite" class="cta">
+        <a
+          href="https://discord.com/oauth2/authorize?client_id=1410837711656325251"
+          class="btn btn-primary btn-large"
+          target="_blank"
+        >
+          Add Kisu to Your Server
+        </a>
+        <p class="permissions-note">
+          <em
+            >Required Permissions: Send Messages, Use Slash Commands, Add
+            Reactions, Read Message History</em
+          >
+        </p>
+      </section>
     </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

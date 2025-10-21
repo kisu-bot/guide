@@ -6,11 +6,11 @@
 
 ### Wishlist Calculation
 
-When viewing your collection with `nc`, click on the ❤️ reaction to have Kisu total up the wishlist values on the page.
+When viewing your collection with nc, click on the ❤️ reaction to have Kisu total up the wishlist values on the page.
 
 ### Collection Filter Generation
 
-When viewing `nsl` or `nwl`, click on the ✏️ reaction to have Kisu generate collection filter strings for you to use to easily search collections.
+When viewing nsl or nwl, click on the ✏️ reaction to have Kisu generate collection filter strings for you to use to easily search collections.
 
 ### Series Wishlist
 
